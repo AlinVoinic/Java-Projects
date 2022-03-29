@@ -13,19 +13,19 @@ public class Main {
         album.addSong("Benzin",4.38);
         albums.add(album);
 
-        album = new Album("All about AlbertNBN","AlbertNBN");
-        album.addSong("BETO",2.53);
-        album.addSong("M6",3.11);
-        album.addSong("O fut pe mamaie",4.01);
-        album.addSong("Hatz",3);
+        album = new Album("All about Queen","Queen");
+        album.addSong("Bohemian Rhapsody",5.53);
+        album.addSong("Somebody to love",5.11);
+        album.addSong("The show must go on",4.21);
+        album.addSong("We will rock you",3.15);
         albums.add(album);
 
         LinkedList<Song> playlist = new LinkedList<>();
         albums.get(0).addToPlaylist("Du hast",playlist);
         albums.get(0).addToPlaylist("Benzin",playlist);
         albums.get(0).addToPlaylist(5,playlist); //wrong
-        albums.get(1).addToPlaylist("M6",playlist);
-        albums.get(1).addToPlaylist("Hatz",playlist);
+        albums.get(1).addToPlaylist("Bohemian Rhapsody",playlist);
+        albums.get(1).addToPlaylist("We will rock you",playlist);
         albums.get(1).addToPlaylist(3,playlist);
 
         play(playlist);
@@ -36,6 +36,7 @@ public class Main {
         boolean quit = false;
         boolean forward = true;
         ListIterator<Song> listIterator = playlist.listIterator();
+        
         if (playlist.size() == 0) {
             System.out.println("No songs in playlist");
             return;
